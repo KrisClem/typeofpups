@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dog API Breed random</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>What kind of pup?</h1>
+
+        <form>
+            <label for="breed-choice">Please type a breed</label>
+            <input id="breed-choice" name="breed-choice" type="text" onfocus="this.value=''" required/>
+            <button class="submit-button" type="submit">Show the pup!</button>
+        </form>
+        <section class="results hidden">
+            <h2>Look at this pup!</h2>
+            <img class="results-img" alt="placeholder">
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
