@@ -10,8 +10,10 @@ function getDogImage(breed) {
 }
 
 function showPups(responseJson) { 
-    $('.results-img').replaceWith(
-        `<img class="results-img" src=${responseJson}>`
+    $('.results').empty()
+    $('.results').append(
+        `<h2>Look at this pup!</h2>
+        <img class="results-img" src=${responseJson}>`
     )
 
     $('.results').removeClass('hidden');
@@ -21,11 +23,12 @@ function fetchStatusHandler(response) {
   if (response.status === 200) {
     return response;
   } else {
-    $('.results').replaceWith(
-        `<h2>Oh no, there are no pups of that breed.</h2>
-        <h3>Please try a different breed</h3>`
-    )
-    $('.results').removeClass('hidden');
+        $('.results').empty()
+        $('.results').append(
+            `<h2>Oh no, there are no pups of that breed.</h2>
+            <h3>Please try a different breed</h3>`
+        )
+        $('.results').removeClass('hidden');
   }
 }
 
