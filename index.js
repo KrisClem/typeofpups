@@ -10,6 +10,7 @@ function getDogImage(breed) {
 }
 
 function showPups(responseJson) { 
+    console.log(responseJson)
     $('.results').empty()
     $('.results').append(
         `<h2>Look at this pup!</h2>
